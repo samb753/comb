@@ -1,1 +1,6 @@
 <h1>All</h1>
+
+<%= @phrases.each do |phrase| %>
+<h2><%= phrase.first_word %></h2>
+<h2><%= phrase.second_word %></h2>
+<% end %>
