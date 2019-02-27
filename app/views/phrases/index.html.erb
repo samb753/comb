@@ -2,6 +2,7 @@
 
 <% @phrases.each do |phrase| %>
   <%= link_to phrase_path(phrase) do %>
-    <h2><%= phrase.first_word %><%= phrase.second_word %></h2>
+    <h2><%= phrase.first_word %> <%= phrase.second_word %></h2>
+    <%= link_to "🗑", phrase_path(phrase), method: :delete, data: { confirm: "Are you sure?" } %>
   <% end %>
 <% end %>

@@ -1,10 +1,12 @@
 class PhrasesController < ApplicationController
+
+  before_action :set_phrase, only: [:show, :edit, :update, :destroy]
+
   def index
     @phrases = Phrase.all
   end
 
   def show
-    @phrase = Phrase.find(params[:id])
   end
 
   def new
@@ -12,10 +14,30 @@ class PhrasesController < ApplicationController
   end
 
   def create
+    @phrase = Phrase.create(phrase_params)
+    redirect_to phrases_path
   end
 
   def edit
-    @phrase = Phrase.find(params[:id])
   end
 
+  def update
+    @phrase.update(phrase_params)
+    redirect_to phrase_path(@phrase)
+  end
+
+  def destroy
+    @phrase.destroy
+    redirect_to phrases_path
+  end
+
+  private
+
+  def phrase_params
+    params.require(:phrase).permit(:first_word, :second_word)
+  end
+
+  def set_phrase
+    @phrase = Phrase.find(params[:id])
+  end
 end
