@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   root to: "phrases#index"
 
   resources :phrases
+  get 'phrase/random', to: 'phrases#random'
+
   resources :users
 
   # delete 'phrases/:id', to: 'phrases#destroy'

@@ -16,6 +16,7 @@ class PhrasesController < ApplicationController
   def create
     @phrase = Phrase.create(phrase_params)
     redirect_to phrases_path
+    @phrase.save!
   end
 
   def edit
@@ -29,6 +30,11 @@ class PhrasesController < ApplicationController
   def destroy
     @phrase.destroy
     redirect_to phrases_path
+  end
+
+  def random
+    # @phrase = Phrase.order('RANDOM()').first
+    @phrase = Phrase.all.sample
   end
 
   private
