@@ -46,4 +46,44 @@ phrase3 = Phrase.create!(
 
 phrase3.save!
 
+phrase4 = Phrase.create!(
+  first_word: 'Morning',
+  second_word: 'Roll',
+  user: user1
+)
+
+phrase4.save!
+
+phrase5 = Phrase.create!(
+  first_word: 'Encrusted',
+  second_word: 'Similarities',
+  user: user2
+)
+
+phrase5.save!
+
+phrase6 = Phrase.create!(
+  first_word: 'Cherished',
+  second_word: 'Topography',
+  user: user3
+)
+
+phrase6.save!
+
+phrase7 = Phrase.create!(
+  first_word: 'Slippery',
+  second_word: 'Rhizome',
+  user: user1
+)
+
+phrase7.save!
+
+phrase8 = Phrase.create!(
+  first_word: 'Succulent',
+  second_word: 'Tale',
+  user: user2
+)
+
+phrase8.save!
+
 puts 'Done!'

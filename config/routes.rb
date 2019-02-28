@@ -8,6 +8,4 @@ Rails.application.routes.draw do
   get 'phrase/random', to: 'phrases#random'
 
   resources :users
-
-  # delete 'phrases/:id', to: 'phrases#destroy'
 end
