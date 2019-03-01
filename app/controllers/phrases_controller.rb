@@ -40,7 +40,7 @@ class PhrasesController < ApplicationController
   private
 
   def phrase_params
-    params.require(:phrase).permit(:first_word, :second_word)
+    params.require(:phrase).permit(:first_word, :second_word, :color)
   end
 
   def set_phrase
