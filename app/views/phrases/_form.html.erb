@@ -1,10 +1,12 @@
-<%= form_for(@phrase) do |f| %>
-  <%= f.label :first_word, "first word" %>
+<%= simple_form_for(@phrase) do |f| %>
+  <%= f.label :first_word, "First Word" %>
   <%= f.text_field :first_word %>
-  <%= f.label :second_word, "second word" %>
+  <%= f.label :second_word, "Second Word" %>
   <%= f.text_field :second_word %>
-   <%= f.label :color, "color" %>
-  <%= f.text_field :color %>
+  <%= f.input :color, as: :minicolors %>
   <%= f.submit %>
 <% end %>
+
+
+
 
