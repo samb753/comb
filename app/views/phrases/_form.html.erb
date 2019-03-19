@@ -1,12 +1,9 @@
-<%= simple_form_for(@phrase) do |f| %>
-  <%= f.label :first_word, "First Word" %>
-  <%= f.text_field :first_word %>
-  <%= f.label :second_word, "Second Word" %>
-  <%= f.text_field :second_word %>
-  <%= f.input :color, as: :minicolors %>
-  <%= f.submit %>
-<% end %>
-
-
-
+<div class="container newphrase">
+  <%= simple_form_for(@phrase) do |f| %>
+    <%= f.text_field :first_word, placeholder: @first_placeholder %>
+    <%= f.text_field :second_word, placeholder: @second_placeholder %>
+    <%= f.input :color, as: :minicolors, label: "🎨" %>
+    <%= f.submit %>
+  <% end %>
+</div>
 
