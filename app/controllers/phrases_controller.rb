@@ -11,8 +11,6 @@ class PhrasesController < ApplicationController
 
   def new
     @phrase = Phrase.new
-    @first_placeholder = LiterateRandomizer.word
-    @second_placeholder = LiterateRandomizer.word
   end
 
   def create

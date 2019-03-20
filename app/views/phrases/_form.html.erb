@@ -1,9 +1,0 @@
-<div class="container newphrase">
-  <%= simple_form_for(@phrase) do |f| %>
-    <%= f.text_field :first_word, placeholder: @first_placeholder %>
-    <%= f.text_field :second_word, placeholder: @second_placeholder %>
-    <%= f.input :color, as: :minicolors, label: "🎨" %>
-    <%= f.submit %>
-  <% end %>
-</div>
-
