@@ -2,8 +2,8 @@
   <div class="phrase-new-box">
     <%= simple_form_for(@phrase) do |f| %>
     <div class="phrase-text-container">
-      <%= f.text_field :first_word, placeholder: LiterateRandomizer.word, class: "phrase-text-entry" %>
-      <%= f.text_field :second_word, placeholder: LiterateRandomizer.word, class: "phrase-text-entry" %>
+      <%= f.text_field :first_word, placeholder: LiterateRandomizer.word.downcase, class: "phrase-text-entry" %>
+      <%= f.text_field :second_word, placeholder: LiterateRandomizer.word.downcase, class: "phrase-text-entry" %>
     </div>
       <%= f.input :color, as: :minicolors, label: "🎨" %>
       <%= f.submit "Create" %>

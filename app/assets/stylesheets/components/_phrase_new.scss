@@ -5,11 +5,16 @@
 
 .phrase-text-entry {
   font-size: 5vh;
+  outline: none;
+  border: none;
+  border-bottom: 3px solid rgba(214,195,216,0.38);
 }
 
 .phrase-text-container {
   margin-top: 50vh;
 }
+
+
 
 // .phrase-new-box {
 //   position: absolute;
