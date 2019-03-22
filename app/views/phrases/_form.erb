@@ -4,7 +4,8 @@
     <div class="phrase-text-container">
       <%= f.text_field :first_word, placeholder: LiterateRandomizer.word.downcase, class: "phrase-text-entry" %>
       <%= f.text_field :second_word, placeholder: LiterateRandomizer.word.downcase, class: "phrase-text-entry" %>
-      <%= f.input :color, as: :minicolors, label: "🎨" %>
+      <%= f.input :color, as: :minicolors, input_html: {data: {
+          minicolors: {theme: :bootstrap, position: :top }}} %>
       <%= f.submit "Create" %>
     </div>
     <% end %>

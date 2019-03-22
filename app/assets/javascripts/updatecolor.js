@@ -5,3 +5,4 @@ colorInput.oninput = () => {
   document.getElementById('newPhraseBackground').style.backgroundColor = colorInput.value
 }
 
+
