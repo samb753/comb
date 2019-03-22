@@ -1,6 +1,11 @@
 .phrase {
   text-align: center;
-  height: 100vh
+  height: 100vh;
+}
+
+.phrase-entry-box {
+  position: absolute;
+  bottom: 0;
 }
 
 .phrase-text-entry {
