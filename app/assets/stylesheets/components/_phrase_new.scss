@@ -6,6 +6,7 @@
 .phrase-entry-box {
   position: absolute;
   bottom: 0;
+  width: 100%;
 }
 
 .phrase-text-entry {
@@ -15,8 +16,9 @@
   border-bottom: 3px solid rgba(214,195,216,0.38);
 }
 
-.phrase-text-container {
-  margin-top: 50vh;
+.phrase-data-box {
+  display: flex;
+  // margin-top: 50vh;
 }
 
 #newphrasebox {

@@ -1,12 +1,18 @@
 <div class="container-fluid phrase" id="newPhraseBackground">
   <div class="fixed-bottom phrase-entry-box">
     <%= simple_form_for(@phrase) do |f| %>
-    <div class="phrase-text-container">
-      <%= f.text_field :first_word, placeholder: LiterateRandomizer.word.downcase, class: "phrase-text-entry" %>
-      <%= f.text_field :second_word, placeholder: LiterateRandomizer.word.downcase, class: "phrase-text-entry" %>
-      <%= f.input :color, as: :minicolors, input_html: {data: {
+    <div class="phrase-data-container">
+      <div class="col-sm-4 phrase-input">
+        <%= f.text_field :first_word, placeholder: LiterateRandomizer.word.downcase, class: "phrase-text-entry" %>
+        <%= f.text_field :second_word, placeholder: LiterateRandomizer.word.downcase, class: "phrase-text-entry" %>
+      </div>
+      <div class="col-sm-4 create">
+        <%= f.submit "Create" %>
+      </div>
+      <div class="col-sm-4 color-input">
+        <%= f.input :color, as: :minicolors, input_html: {data: {
           minicolors: {theme: :bootstrap, position: :top }}} %>
-      <%= f.submit "Create" %>
+      </div>
     </div>
     <% end %>
   </div>
