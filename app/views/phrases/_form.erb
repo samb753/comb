@@ -10,11 +10,10 @@
         <%= f.submit "Create" %>
       </div>
       <div class="col-sm-4 color-input">
-        <%= f.input :color, as: :minicolors, input_html: {data: {
-          minicolors: {theme: :bootstrap, position: :top }}} %>
+        <%= f.input :color, as: :minicolors, label:false, input_html: {data: {
+          minicolors: { position: :top }}} %>
       </div>
     </div>
     <% end %>
   </div>
 </div>
-
