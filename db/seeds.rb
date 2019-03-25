@@ -61,7 +61,7 @@ phrase4.save!
 phrase5 = Phrase.create!(
   first_word: 'Encrusted',
   second_word: 'Similarities',
-  color: '#efeed2',
+  color: '#ffa885',
   user: user2
 )
 

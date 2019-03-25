@@ -3,15 +3,15 @@
     <%= simple_form_for(@phrase) do |f| %>
     <div class="phrase-data-container">
       <div class="col-sm-4 phrase-input">
-        <%= f.text_field :first_word, placeholder: LiterateRandomizer.word.downcase, class: "phrase-text-entry" %>
-        <%= f.text_field :second_word, placeholder: LiterateRandomizer.word.downcase, class: "phrase-text-entry" %>
+        <%= f.input :color, as: :minicolors, label:false, input_html: {data: {
+          minicolors: { position: :top }}}, class: "phrase-form-field" %>
       </div>
       <div class="col-sm-4 create">
         <%= f.submit "Create" %>
       </div>
-      <div class="col-sm-4 color-input">
-        <%= f.input :color, as: :minicolors, label:false, input_html: {data: {
-          minicolors: { position: :top }}} %>
+      <div class="col-sm-4 phrase-input">
+        <%= f.text_field :first_word, placeholder: LiterateRandomizer.word.downcase, class: "phrase-form-field" %>
+        <%= f.text_field :second_word, placeholder: LiterateRandomizer.word.downcase, class: "phrase-form-field" %>
       </div>
     </div>
     <% end %>
