@@ -4,10 +4,10 @@
   </div>
   <div class="fixed-bottom phrase-entry-box">
     <div class="col-sm-4 phrase-navigation">
-    <%= link_to "Random", phrase_random_path %> |
-    <%= link_to "New", new_phrase_path %> |
-    <%= link_to "Back", phrases_path %> |
-    <%= link_to "Delete", phrase_path, method: :delete, data: { confirm: "Are you sure?" } %>
+    <%= link_to ('<i class="fa fa-trash"></i>').html_safe, phrase_path, method: :delete, data: { confirm: "Are you sure?" } %>
+    <%= link_to ('<i class="fa fa-undo"></i>').html_safe, phrases_path %>
+    <%= link_to ('<i class="fa fa-random"></i>').html_safe, phrase_random_path  %>
+    <%= link_to ('<i class="fa fa-plus"></i>').html_safe, new_phrase_path %>
     </div>
     <div class="col-sm-4">
 
@@ -17,3 +17,6 @@
     </div>
   </div>
 </div>
+
+
+
