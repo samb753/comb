@@ -3,6 +3,10 @@
   height: 100vh;
 }
 
+.phrase-name {
+  font-size: 4vh;
+}
+
 .phrase-entry-box {
   position: absolute;
   bottom: 0;
@@ -20,6 +24,17 @@
 .phrase-data-box {
   display: flex;
   // margin-top: 50vh;
+}
+
+.phrase-navigation {
+  font-size: 4vh;
+  color: black;
+  text-decoration: none;
+  letter-spacing: 2vh;
+}
+
+.phrase-hex {
+  font-size: 4vh;
 }
 
 #newphrasebox {

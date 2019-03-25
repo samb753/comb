@@ -1,19 +1,19 @@
 <div class="container-fluid phrase" style="background-color: <%= @phrase.color %>">
   <div class="col-sm-4 col-sm-offset-4">
-     <h1 style="font-size: 30px"><%= @phrase.first_word %> <%= @phrase.second_word %></h1>
+     <h1 class="phrase-name"><%= @phrase.first_word %> <%= @phrase.second_word %></h1>
   </div>
   <div class="fixed-bottom phrase-entry-box">
+    <div class="col-sm-4 phrase-hex">
+      <%= @phrase.color %>
+    </div>
+    <div class="col-sm-4">
+
+    </div>
     <div class="col-sm-4 phrase-navigation">
     <%= link_to ('<i class="fa fa-trash"></i>').html_safe, phrase_path, method: :delete, data: { confirm: "Are you sure?" } %>
     <%= link_to ('<i class="fa fa-undo"></i>').html_safe, phrases_path %>
     <%= link_to ('<i class="fa fa-random"></i>').html_safe, phrase_random_path  %>
     <%= link_to ('<i class="fa fa-plus"></i>').html_safe, new_phrase_path %>
-    </div>
-    <div class="col-sm-4">
-
-    </div>
-    <div class="col-sm-4">
-      <%= @phrase.color %>
     </div>
   </div>
 </div>
