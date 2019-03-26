@@ -22,7 +22,9 @@
  *= require font-awesome
  */
 
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "pages";
 @import "font-awesome";
+
+@import "pages";

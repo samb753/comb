@@ -4,12 +4,21 @@
     <%= link_to ('<i class="fa fa-random"></i>').html_safe, phrase_random_path %>
   </div>
   <div class="container cards-container">
-    <div class="row">
+    <div class="row" id="cardRow">
         <% @phrases.each do |phrase| %>
           <%= link_to phrase_path(phrase) do %>
-            <div class="card col-md-3 col-sm-6 col-xs-12" style="background: <%= phrase.color %>">
-              <div class="card-body">
-                <h2 class="card-header"><%= phrase.first_word %> <%= phrase.second_word %></h2>
+            <div class="col-md-3 col-sm-6 col-xs-12" style="padding: 0px">
+              <div class="card" style="background: <%= phrase.color %>">
+                <div class="card-body">
+                </div>
+                <div class="card-footer">
+                  <div class="card-phrase">
+                    <%= phrase.first_word %> <%= phrase.second_word %>
+                  </div>
+                  <div class="card-hex">
+                      <%= phrase.color %>
+                  </div>
+                </div>
               </div>
             </div>
           <% end %>
