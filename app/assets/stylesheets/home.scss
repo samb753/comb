@@ -1,0 +1,54 @@
+.home-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation: bg-animation 10s infinite alternate;
+}
+
+@mixin starting-bg(){
+  background: rgb(random(255), random(255), random(255));
+}
+
+@-webkit-keyframes bg-animation {
+  0% {
+    @include starting-bg
+  }
+  20% {
+    background-color:  rgb(random(255), random(255), random(255));
+  }
+  40% {
+    background-color: rgb(random(255), random(255), random(255));
+  }
+  60% {
+    background-color:  rgb(random(255), random(255), random(255));
+  }
+  80% {
+    background-color:  rgb(random(255), random(255), random(255));
+  }
+  100% {
+    @include starting-bg;
+  }
+}
+
+@keyframes bg-animation {
+  0% {
+    @include starting-bg
+  }
+  20% {
+    background-color:  rgb(random(255), random(255), random(255));
+  }
+  40% {
+    background-color: rgb(random(255), random(255), random(255));
+  }
+  60% {
+    background-color:  rgb(random(255), random(255), random(255));
+  }
+  80% {
+    background-color:  rgb(random(255), random(255), random(255));
+  }
+  100% {
+    @include starting-bg;
+  }
+}
