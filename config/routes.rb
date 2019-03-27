@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   resources :phrases
   get 'phrase/random', to: 'phrases#random'
+  get '*path', to: 'phrase#index' unless Rails.env.development?
 
   resources :users
 end
