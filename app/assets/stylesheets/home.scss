@@ -53,8 +53,22 @@
   }
 }
 
-.home-title {
-  vertical-align: middle;
+.grid-container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: ". . . ." ". home-title-container home-title-container ." ". . . .";
+}
+
+.home-title-container {
+  grid-area: home-title-container;
+}
+
+#homeHeader {
+  font-size: 80px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
 }
 
 
