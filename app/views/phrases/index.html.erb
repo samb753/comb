@@ -1,8 +1,18 @@
 <div class="container">
-  <div class="phrase-navigation">
-    <%= link_to ('<i class="fa fa-plus"></i>').html_safe, new_phrase_path %>
-    <%= link_to ('<i class="fa fa-random"></i>').html_safe, phrase_random_path %>
-  </div>
+  <nav>
+    <div class="nav-new">
+      <%= link_to ('<i class="fa fa-plus"></i>').html_safe, new_phrase_path %>
+    </div>
+    <div class="nav-title">
+      <h3 style="padding: 0px;
+  margin: 0px;">
+        <%= link_to 'phrase palette', root_path, id: "navHeaderLink" %>
+      </h3>
+    </div>
+    <div class="nav-random">
+      <%= link_to ('<i class="fa fa-random"></i>').html_safe, phrase_random_path %>
+    </div>
+  </nav>
   <div class="container cards-container">
     <div class="row" id="cardRow">
         <% @phrases.each do |phrase| %>
