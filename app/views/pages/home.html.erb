@@ -2,9 +2,11 @@
   <div class="grid-container">
     <div class="home-title-container text-center">
       <h1 id="homeHeader">phrase palette</h1>
-       <%= link_to ('<i class="fa fa-plus"></i>').html_safe, new_phrase_path %>
-       <%= link_to ('<i class="fa fa-archive"></i>').html_safe, phrases_path %>
-       <%= link_to ('<i class="fa fa-random"></i>').html_safe, phrase_random_path %>
+      <div class="home-navigation">
+       <%= link_to ('<i class="fa fa-plus"></i>').html_safe, new_phrase_path, class: 'nav-icon' %>
+       <%= link_to ('<i class="fa fa-archive"></i>').html_safe, phrases_path, class: 'nav-icon' %>
+       <%= link_to ('<i class="fa fa-random"></i>').html_safe, phrase_random_path, class: 'nav-icon' %>
+      </div>
     </div>
   </div>
 </div>

@@ -5,3 +5,18 @@ $orange: #E67E22;
 $green: #32B796;
 $gray: #000000;
 $light-gray: #F4F4F4;
+
+// font awesome override
+
+.fa {
+  color: #333333 !important;
+  transition: all 0.3s ease;
+  &:hover {
+   transform:scale(1.1);
+ }
+}
+
+.nav-icon {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+}
