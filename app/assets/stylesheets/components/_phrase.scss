@@ -16,7 +16,7 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-  margin-bottom: 3vh;
+  padding: 2vh;
 }
 
 .phrase-form-field {
@@ -24,6 +24,7 @@
  outline: none;
  border: none;
  background: transparent;
+ text-align: center;
  width: 184px;
 }
 
@@ -35,9 +36,9 @@
   text-align: right;
 }
 
-// .words-form {
-//   text-align: right;
-// }
+.hex-form {
+  text-align: left;
+}
 
 .phrase-hex {
   font-size: 20px;
@@ -49,6 +50,7 @@
 }
 
 .new-phrase-buttons {
+  text-align: right;
   font-size: 20px;
 }
 
@@ -64,6 +66,7 @@
 #formSubmit {
   background: none;
   border: none;
+  padding: none;
   font-size: 30px;
 }
 

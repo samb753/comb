@@ -10,11 +10,10 @@
       <!-- midde -->
     </div>
     <div class="col-sm-4 phrase-navigation">
-      <%= link_to ('<i class="fa fa-trash"></i>').html_safe, phrase_path, method: :delete, data: { confirm: "Are you sure?" }, class: "trim" %>
-       <%= link_to ('<i class="fa fa-archive"></i>').html_safe, phrases_path, class: 'trim' %>
-      <%= link_to ('<i class="fa fa-undo"></i>').html_safe, phrases_path, class: "trim" %>
-      <%= link_to ('<i class="fa fa-random"></i>').html_safe, phrase_random_path, class: "trim"  %>
       <%= link_to ('<i class="fa fa-plus"></i>').html_safe, new_phrase_path, class: "trim" %>
+      <%= link_to ('<i class="fa fa-trash"></i>').html_safe, phrase_path, method: :delete, data: { confirm: "Are you sure?" }, class: "trim" %>
+      <%= link_to ('<i class="fa fa-random"></i>').html_safe, phrase_random_path, class: "trim"  %>
+      <%= link_to ('<i class="fa fa-archive"></i>').html_safe, phrases_path, class: "trim" %>
     </div>
   </div>
 </div>
