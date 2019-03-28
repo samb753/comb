@@ -3,6 +3,11 @@
   height: 100vh;
 }
 
+
+.phrase-data-container {
+  font-family: 'Asap'
+}
+
 .phrase-name {
   font-size: 47px;
 }
@@ -15,10 +20,11 @@
 }
 
 .phrase-form-field {
-  font-size: 20px;
-  outline: none;
-  border: none;
-  background: transparent;
+ font-size: 30px;
+ outline: none;
+ border: none;
+ background: transparent;
+ width: 184px;
 }
 
 .phrase-navigation {
@@ -29,10 +35,9 @@
   text-align: right;
 }
 
-.trim {
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: white;
-}
+// .words-form {
+//   text-align: right;
+// }
 
 .phrase-hex {
   font-size: 20px;
@@ -44,7 +49,7 @@
 }
 
 #phrase_color {
-  font-size: 4vh;
+  font-size: 30px;
   border: none;
   outline: none;
   background: transparent;
@@ -55,7 +60,7 @@
 #formSubmit {
   background: none;
   border: none;
-  font-size: 4vh;
+  font-size: 30px;
 }
 
 #phraseHex {
