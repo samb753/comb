@@ -1,10 +1,10 @@
-.phrase {
+.phrase-container {
   text-align: center;
   height: 100vh;
 }
 
 .phrase-name {
-  font-size: 4vh;
+  font-size: 47px;
 }
 
 .phrase-entry-box {
@@ -22,14 +22,20 @@
 }
 
 .phrase-navigation {
-  font-size: 4vh;
+  font-size: 25px;
   color: black;
   text-decoration: none;
-  letter-spacing: 2vh;
+  letter-spacing: 2px;
+  text-align: right;
+}
+
+.trim {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
 }
 
 .phrase-hex {
-  font-size: 4vh;
+  font-size: 20px;
 }
 
 .minicolors-focus {
@@ -50,4 +56,11 @@
   background: none;
   border: none;
   font-size: 4vh;
+}
+
+#phraseHex {
+  margin: 0px;
+  padding: 0px;
+  font-size: 30px;
+  text-align: left;
 }
