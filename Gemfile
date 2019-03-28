@@ -20,7 +20,7 @@ gem 'webpacker'
 
 gem 'bootstrap-sass'
 gem 'simple_form'
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
 
 gem 'devise'
 gem 'pundit'
@@ -28,7 +28,7 @@ gem 'pundit'
 gem 'jquery-rails'
 gem 'jquery-minicolors-rails'
 
-gem 'literate_randomizer'
+gem 'bazaar'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
