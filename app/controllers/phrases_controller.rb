@@ -15,8 +15,11 @@ class PhrasesController < ApplicationController
 
   def create
     @phrase = Phrase.create(phrase_params)
-    redirect_to phrases_path
-    @phrase.save!
+    if @phrase.save
+      redirect_to phrases_path, notice: "Saved"
+    else
+      render 'new'
+    end
   end
 
   def edit
@@ -29,7 +32,7 @@ class PhrasesController < ApplicationController
 
   def destroy
     @phrase.destroy
-    redirect_to phrases_path
+    redirect_to phrases_path, notice: "Deleted"
   end
 
   def random
