@@ -5,7 +5,7 @@
 
 
 .phrase-data-container {
-  font-family: 'Asap'
+  font-family: 'Asap';
 }
 
 .phrase-name {
@@ -46,6 +46,10 @@
 .minicolors-focus {
   outline: none;
   -webkit-appearance: none;
+}
+
+.new-phrase-buttons {
+  font-size: 20px;
 }
 
 #phrase_color {
