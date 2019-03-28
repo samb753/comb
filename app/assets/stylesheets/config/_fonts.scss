@@ -1,5 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Asap:600i,700i|Open+Sans&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Asap:500i,700i|Open+Sans&subset=latin-ext');
 
 $body-font: "Open Sans", "sans-serif";
 $headers-font: "Asap", "sans-serif";
 
+.fa {
+  color: #333333 !important;
+  transition: all 0.3s ease;
+  &:hover {
+   transform:scale(1.3);
+ }
+}
