@@ -23,8 +23,8 @@ user3.save!
 puts 'Creating test phrases...'
 
 phrase1 = Phrase.create!(
-  first_word: 'Incessant',
-  second_word: 'Spin',
+  first_word: 'incessant',
+  second_word: 'spin',
   color: '#e5ccff',
   user: user1
 )
@@ -32,8 +32,8 @@ phrase1 = Phrase.create!(
 phrase1.save!
 
 phrase2 = Phrase.create!(
-  first_word: 'Tender',
-  second_word: 'Outreach',
+  first_word: 'tender',
+  second_word: 'outreach',
   color: '#ffe0ff',
   user: user2
 )
@@ -41,8 +41,8 @@ phrase2 = Phrase.create!(
 phrase2.save!
 
 phrase3 = Phrase.create!(
-  first_word: 'Functional',
-  second_word: 'Career',
+  first_word: 'functional',
+  second_word: 'career',
   color: '#81acf4',
   user: user3
 )
@@ -50,8 +50,8 @@ phrase3 = Phrase.create!(
 phrase3.save!
 
 phrase4 = Phrase.create!(
-  first_word: 'Morning',
-  second_word: 'Roll',
+  first_word: 'morning',
+  second_word: 'roll',
   color: '#efeed2',
   user: user1
 )
@@ -59,8 +59,8 @@ phrase4 = Phrase.create!(
 phrase4.save!
 
 phrase5 = Phrase.create!(
-  first_word: 'Encrusted',
-  second_word: 'Similarities',
+  first_word: 'encrusted',
+  second_word: 'similarities',
   color: '#ffa885',
   user: user2
 )
@@ -68,8 +68,8 @@ phrase5 = Phrase.create!(
 phrase5.save!
 
 phrase6 = Phrase.create!(
-  first_word: 'Cherished',
-  second_word: 'Topography',
+  first_word: 'cherished',
+  second_word: 'topography',
   color: '#ffcf91',
   user: user3
 )
@@ -77,8 +77,8 @@ phrase6 = Phrase.create!(
 phrase6.save!
 
 phrase7 = Phrase.create!(
-  first_word: 'Slippery',
-  second_word: 'Rhizome',
+  first_word: 'slippery',
+  second_word: 'rhizome',
   color: '#89ffeb',
   user: user1
 )
@@ -86,8 +86,8 @@ phrase7 = Phrase.create!(
 phrase7.save!
 
 phrase8 = Phrase.create!(
-  first_word: 'Succulent',
-  second_word: 'Tale',
+  first_word: 'succulent',
+  second_word: 'tale',
   color: '#c8f966',
   user: user2
 )

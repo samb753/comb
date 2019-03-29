@@ -7,8 +7,8 @@
           minicolors: { position: :top }}}, class: "phrase-form-field" %>
       </div>
       <div class="col-sm-4 words-form">
-        <%= f.text_field :first_word, placeholder: Bazaar.super_adj, class: "phrase-form-field" %>
-        <%= f.text_field :second_word, placeholder: Bazaar.super_item, class: "phrase-form-field" %>
+        <%= f.text_field :first_word, placeholder: Bazaar.super_adj.downcase, class: "phrase-form-field" %>
+        <%= f.text_field :second_word, placeholder: Bazaar.super_item.downcase, class: "phrase-form-field" %>
       </div>
       <div class="col-sm-4 new-phrase-buttons">
         <%= button_tag type: 'submit', class: "trim", id: "formSubmit" do %>
