@@ -1,13 +1,19 @@
 .alert {
-  margin: 0;
+  position: absolute;
   text-align: center;
-  color: #655D5C;
+  width: 100%;
+  margin: 0;
+  color: #C7C7C7;
+  background: none;
   border: none;
-  // transition: 5s opacity ease;
+  -webkit-animation: fadeOut 3s linear forwards;
+  animation: fadeOut 3s linear forwards;
+  z-index: 999 !important;
 }
-.alert-info {
-  background: #DDFDB1;;
-}
-.alert-warning {
-  background: #FF5634;
+
+@-webkit-keyframes fadeOut {
+    0%   {opacity: 1;}
+    70%  {opacity: 1;}
+    90% {opacity: 1;-webkit-transform: translateY(0px);}
+    100% {opacity: 0;-webkit-transform: translateY(-30px);}
 }

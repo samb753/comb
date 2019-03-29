@@ -3,7 +3,7 @@ class PhrasesController < ApplicationController
   before_action :set_phrase, only: [:show, :edit, :update, :destroy]
 
   def index
-    @phrases = Phrase.all
+    @phrases = Phrase.order(created_at: :desc)
   end
 
   def show
