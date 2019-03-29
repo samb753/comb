@@ -63,10 +63,21 @@
 
 .home-title-container {
   grid-area: home-title-container;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+  transform: scale(1.02);
+  }
+}
+
+.home-title-container a:hover {
+  color: #c7c7c7;
+  text-decoration: none;
+  transform: scale(1.01);
 }
 
 #homeHeader {
   font-size: 80px;
+  color: black;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: white;
 }
