@@ -19,7 +19,7 @@
 }
 
 .phrase-form-field {
- font-size: 30px;
+ font-size: 4vh;
  outline: none;
  border: none;
  background: transparent;
@@ -34,6 +34,14 @@
   letter-spacing: 2px;
   text-align: right;
 }
+
+@media only screen
+and (max-device-width: 768px) {
+  .hex-form {
+    text-align: center;
+  }
+}
+
 
 .hex-form {
   text-align: left;
@@ -54,7 +62,7 @@
 }
 
 #phrase_color {
-  font-size: 30px;
+  font-size: 4vh;
   border: none;
   outline: none;
   background: transparent;

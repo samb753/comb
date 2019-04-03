@@ -2,15 +2,15 @@
   <div class="fixed-bottom phrase-entry-box">
     <%= simple_form_for(@phrase) do |f| %>
     <div class="phrase-data-container trim">
-      <div class="col-sm-4 hex-form">
+      <div class="col-sm-4 col-md-4 hex-form">
         <%= f.input :color, as: :minicolors, label:false, placeholder: "🎨", input_html: {data: {
           minicolors: { position: :top }}}, class: "phrase-form-field" %>
       </div>
-      <div class="col-sm-4 words-form">
+      <div class="col-sm-3 col-md-4 words-form">
         <%= f.text_field :first_word, value: Bazaar.super_adj.downcase, placeholder: ".....", class: "phrase-form-field" %>
         <%= f.text_field :second_word, value: Bazaar.super_item.downcase, placeholder: ".....", class: "phrase-form-field" %>
       </div>
-      <div class="col-sm-4 new-phrase-buttons">
+      <div class="col-sm-4 col-md-4 new-phrase-buttons">
         <i class="fa fa-undo" id="formClearButton"></i>
         <%= button_tag type: 'submit', class: "trim", id: "formSubmit" do %>
         <i class="fa fa-save" aria-hidden="true"></i>
