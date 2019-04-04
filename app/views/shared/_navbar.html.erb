@@ -6,7 +6,10 @@
       </h3>
     </div>
     <div class="nav-buttons">
+      <%= link_to ('<i class="fa fa-user"></i>').html_safe, user_path(current_user) %>
       <%= link_to ('<i class="fa fa-random"></i>').html_safe, phrase_random_path %>
       <%= link_to ('<i class="fa fa-plus"></i>').html_safe, new_phrase_path %>
     </div>
   </nav>
+
+
