@@ -6,9 +6,10 @@
   color: #C7C7C7;
   background: none;
   border: none;
-  -webkit-animation: fadeOut 3s linear forwards;
-  animation: fadeOut 3s linear forwards;
+  -webkit-animation: fadeOut 2s linear forwards;
+  animation: fadeOut 2s linear forwards;
   z-index: 999 !important;
+  pointer-events: none;
 }
 
 @-webkit-keyframes fadeOut {
