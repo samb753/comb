@@ -1,5 +1,5 @@
 class Phrase < ApplicationRecord
-  belongs_to :user, optional: true
+  belongs_to :user
   before_save :downcase_phrase
 
   def downcase_phrase

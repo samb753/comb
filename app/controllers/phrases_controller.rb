@@ -15,10 +15,11 @@ class PhrasesController < ApplicationController
 
   def create
     @phrase = Phrase.create(phrase_params)
+    @phrase.user_id = current_user.id
     if @phrase.save
       redirect_to phrases_path, notice: "Saved"
     else
-      render 'new'
+      render 'new', notice: "Something went wrong, we'll look into it"
     end
   end
 
@@ -43,7 +44,7 @@ class PhrasesController < ApplicationController
   private
 
   def phrase_params
-    params.require(:phrase).permit(:first_word, :second_word, :color)
+    params.require(:phrase).permit(:first_word, :second_word, :color, :user_id)
   end
 
   def set_phrase
