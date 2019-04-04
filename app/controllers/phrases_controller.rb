@@ -23,6 +23,7 @@ class PhrasesController < ApplicationController
     end
   end
 
+
   def edit
   end
 

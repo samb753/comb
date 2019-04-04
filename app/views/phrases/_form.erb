@@ -3,7 +3,7 @@
     <%= simple_form_for(@phrase) do |f| %>
     <div class="phrase-data-container trim">
       <div class="col-sm-4 col-md-4 hex-form">
-        <%= f.input :color, as: :minicolors, label:false, placeholder: "🎨", input_html: {data: {
+        <%= f.input :color, as: :minicolors, label:false, placeholder: "#f4f4f4", input_html: {data: {
           minicolors: { position: :top }}}, class: "phrase-form-field" %>
       </div>
       <div class="col-sm-3 col-md-4 words-form">
