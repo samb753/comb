@@ -1,0 +1,35 @@
+<div class="container">
+  <nav>
+    <div class="nav-title">
+      <h3 style="margin: 0px">
+        <%= link_to 'phrase palette', root_path, id: "navTitleLink" %>
+      </h3>
+    </div>
+    <div class="nav-buttons">
+      <%= link_to ('<i class="fa fa-random"></i>').html_safe, phrase_random_path %>
+      <%= link_to ('<i class="fa fa-plus"></i>').html_safe, new_phrase_path %>
+    </div>
+  </nav>
+  <div class="cards-container">
+    <div class="row" id="cardRow">
+        <% @phrases.each do |phrase| %>
+            <div class="col-md-3 col-sm-6 col-xs-12" style="padding: 0px">
+              <div class="card" style="background: <%= phrase.color %>">
+                 <%= link_to phrase_path(phrase) do %>
+                  <div class="card-body">
+                  </div>
+                  <div class="card-footer">
+                    <div class="card-phrase" id="cardPhraseLink">
+                      <%= phrase.first_word %> <%= phrase.second_word %>
+                    </div>
+                  <% end %>
+                  <div class="card-hex">
+                    <%= phrase.color %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <% end %>
+      </div>
+    </div>
+</div>
