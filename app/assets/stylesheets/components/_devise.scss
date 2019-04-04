@@ -1,0 +1,13 @@
+.login-container {
+  width: 33.33%;
+  margin: auto;
+  padding: 16px;
+  background: #f4f4f4;
+}
+
+@media only screen
+and (max-device-width: 768px) {
+  .login-container {
+    width: 100%;
+  }
+}
