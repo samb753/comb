@@ -1,20 +1,19 @@
-<div class="container">
-  <nav>
-    <div class="nav-title">
-      <h3 style="margin: 0px">
-        <%= link_to 'phrase palette', root_path, id: "navTitleLink" %>
-      </h3>
-    </div>
-    <div class="nav-buttons">
-      <% if user_signed_in? %>
-      <%= link_to ('<i class="fa fa-user"></i>').html_safe, user_path(current_user) %>
-      <%= link_to('<i class="fa fa-sign-out"></i>'.html_safe, destroy_user_session_path, method: :delete) %>
-      <% else %>
-        <%= link_to('<i class="fa fa-user"></i>'.html_safe, new_user_session_path)  %>
-      <% end %>
-      <%= link_to ('<i class="fa fa-random"></i>').html_safe, phrase_random_path %>
-      <%= link_to ('<i class="fa fa-plus"></i>').html_safe, new_phrase_path %>
-    </div>
-  </nav>
+<nav>
+  <div class="nav-title">
+    <h3 style="margin: 0px">
+      <%= link_to 'phrase palette', root_path, id: "navTitleLink" %>
+    </h3>
+  </div>
+  <div class="nav-buttons">
+    <% if user_signed_in? %>
+    <%= link_to ('<i class="fa fa-user"></i>').html_safe, user_path(current_user) %>
+    <%= link_to('<i class="fa fa-sign-out"></i>'.html_safe, destroy_user_session_path, method: :delete) %>
+    <% else %>
+      <%= link_to('<i class="fa fa-user"></i>'.html_safe, new_user_session_path)  %>
+    <% end %>
+    <%= link_to ('<i class="fa fa-random"></i>').html_safe, phrase_random_path %>
+    <%= link_to ('<i class="fa fa-plus"></i>').html_safe, new_phrase_path %>
+  </div>
+</nav>
 
 
