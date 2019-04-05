@@ -7,13 +7,7 @@
       </h3>
     </div>
     <div class="nav-buttons">
-      <%= link_to ('<i class="fa fa-plus trim"></i>').html_safe, new_phrase_path %>
-      <%= link_to ('<i class="fa fa-random trim"></i>').html_safe, phrase_random_path %>
-      <%= link_to ('<i class="fa fa-archive trim"></i>').html_safe, phrases_path, class: "trim" %>
-      <%= render 'users/user_icon' %>
-      <% if user_signed_in? %>
-      <%= link_to('<i class="fa fa-sign-out trim"></i>'.html_safe, destroy_user_session_path, method: :delete) %>
-      <% end %>
+      <%= render 'shared/nav_buttons' %>
     </div>
   </nav>
     <div class="cards-container">

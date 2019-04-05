@@ -6,22 +6,6 @@
     </h3>
   </div>
   <div class="nav-buttons">
-    <span aria-label="new" data-microtip-position="bottom-left" role="tooltip">
-      <%= link_to ('<i class="fa fa-plus trim"></i>').html_safe, new_phrase_path %>
-    </span>
-    <span aria-label="random" data-microtip-position="bottom-left" role="tooltip">
-      <%= link_to ('<i class="fa fa-random trim"></i>').html_safe, phrase_random_path %>
-    </span>
-    <span aria-label="library" data-microtip-position="bottom-left" role="tooltip">
-      <%= link_to ('<i class="fa fa-archive trim"></i>').html_safe, phrases_path, class: "trim" %>
-    </span>
-    <span aria-label="my palette" data-microtip-position="bottom-left" role="tooltip">
-      <%= render 'users/user_icon' %>
-    </span>
-    <% if user_signed_in? %>
-    <span aria-label="log out" data-microtip-position="bottom-left" role="tooltip">
-      <%= link_to('<i class="fa fa-sign-out trim"></i>'.html_safe, destroy_user_session_path, method: :delete) %>
-    </span>
-    <% end %>
+    <%= render 'shared/nav_buttons' %>
   </div>
 </nav>
