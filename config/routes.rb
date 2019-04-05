@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   get '*path', to: 'phrase#index' unless Rails.env.development?
 
   resources :users
-  # get '/dashboard', to: 'users#show'
+  get '/dashboard', to: 'users#show'
 end
