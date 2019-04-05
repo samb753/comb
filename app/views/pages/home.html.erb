@@ -12,6 +12,7 @@
       <!-- midde -->
     </div>
     <div class="col-sm-4 phrase-navigation">
+      <%= render 'users/user_icon' %>
       <%= link_to ('<i class="fa fa-plus"></i>').html_safe, new_phrase_path, class: "trim" %>
       <%= link_to ('<i class="fa fa-random"></i>').html_safe, phrase_random_path, class: "trim"  %>
       <%= link_to ('<i class="fa fa-archive"></i>').html_safe, phrases_path, class: "trim" %>

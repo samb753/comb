@@ -1,0 +1,5 @@
+<% if user_signed_in? %>
+    <%= link_to ('<i class="fa fa-user trim"></i>').html_safe, user_path(current_user) %>
+  <% else %>
+      <%= link_to('<i class="fa fa-user trim"></i>'.html_safe, new_user_session_path)  %>
+<% end %>
