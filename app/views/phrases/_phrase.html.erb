@@ -9,12 +9,22 @@
       <h2 id="phraseHex" class="trim"><%= @phrase.color %></h2>
     </div>
     <div class="col-sm-4 phrase-navigation">
+      <span aria-label="new" data-microtip-position="top-left" role="tooltip">
       <%= link_to ('<i class="fa fa-plus"></i>').html_safe, new_phrase_path, class: "trim" %>
+      </span>
       <% if current_user && current_user.id == @phrase.user_id %>
-      <%= link_to ('<i class="fa fa-trash"></i>').html_safe, phrase_path, method: :delete, data: { confirm: "Are you sure?" }, class: "trim" %>
+        <span aria-label="delete" data-microtip-position="top-left" role="tooltip">
+          <%= link_to ('<i class="fa fa-trash"></i>').html_safe, phrase_path, method: :delete, data: { confirm: "Are you sure?" }, class: "trim" %>
+        </span>
       <% end %>
-      <%= link_to ('<i class="fa fa-random"></i>').html_safe, phrase_random_path, class: "trim"  %>
-      <%= link_to ('<i class="fa fa-archive"></i>').html_safe, phrases_path, class: "trim" %>
+      <span aria-label="random" data-microtip-position="top-left" role="tooltip">
+        <%= link_to ('<i class="fa fa-random"></i>').html_safe, phrase_random_path, class: "trim"  %>
+      </span>
+      <span aria-label="library" data-microtip-position="top-left" role="tooltip">
+        <%= link_to ('<i class="fa fa-archive"></i>').html_safe, phrases_path, class: "trim" %>
+      </span>
     </div>
   </div>
 </div>
+
+
