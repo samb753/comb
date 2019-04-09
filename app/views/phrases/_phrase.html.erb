@@ -17,7 +17,7 @@
           <%= link_to ('<i class="fa fa-trash"></i>').html_safe, phrase_path, method: :delete, data: { confirm: "Are you sure?" }, class: "trim" %>
         </span>
       <% end %>
-      <span aria-label="random" data-microtip-position="top-left" role="tooltip">
+      <span aria-label="random" data-microtip-position="top-left" role="tooltip" id="tooltip">
         <%= link_to ('<i class="fa fa-random"></i>').html_safe, phrase_random_path, class: "trim"  %>
       </span>
       <span aria-label="library" data-microtip-position="top-left" role="tooltip">
