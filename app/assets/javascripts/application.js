@@ -1,6 +1,7 @@
 //= require rails-ujs
-//= require turbolinks
-//= require_tree .
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery.minicolors
 //= require jquery.minicolors.simple_form
+//= require turbolinks
+//= require_tree .

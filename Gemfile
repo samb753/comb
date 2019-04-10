@@ -26,6 +26,7 @@ gem 'devise'
 gem 'pundit'
 
 gem 'jquery-rails'
+gem 'jquery-turbolinks'
 gem 'jquery-minicolors-rails'
 
 gem 'bazaar'
