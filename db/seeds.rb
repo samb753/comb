@@ -86,12 +86,70 @@ phrase7 = Phrase.create!(
 phrase7.save!
 
 phrase8 = Phrase.create!(
-  first_word: 'succulent',
-  second_word: 'tale',
-  color: '#c8f966',
-  user: user2
-)
+ first_word: 'purring',
+ second_word: 'chasm',
+ color: '#41126b',
+ user: user2
+ )
 
 phrase8.save!
+
+phrase9 = Phrase.create!(
+  first_word: 'balmy',
+  second_word: 'farm',
+  color: '#09b35b',
+  user: user3
+)
+
+phrase9.save!
+
+phrase10 = Phrase.create!(
+  first_word: 'folding',
+  second_word: 'embrace',
+  color: '#fa1263',
+  user: user1
+)
+
+phrase10.save!
+
+phrase11 = Phrase.create!(
+  first_word: 'resilient',
+  second_word: 'beach',
+  color: '#ffdc52',
+  user: user2
+)
+phrase11.save!
+
+phrase12 = Phrase.create!(
+  first_word: 'juicy',
+  second_word: 'window',
+  color: '#ecff7d',
+  user: user3
+)
+phrase12.save!
+
+phrase13 = Phrase.create!(
+  first_word: 'familiar',
+  second_word: 'stream',
+  color: '#52ebff',
+  user: user1
+)
+phrase13.save!
+
+phrase14 = Phrase.create!(
+  first_word: 'lofty',
+  second_word: 'tangle',
+  color: '#9ec0ff',
+  user: user1
+)
+phrase14.save!
+
+phrase15 = Phrase.create!(
+  first_word: 'dense',
+  second_word: 'gap',
+  color: '#3cfa17',
+  user: user1
+)
+phrase15.save!
 
 puts 'Done!'
