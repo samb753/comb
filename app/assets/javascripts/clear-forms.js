@@ -1,8 +1,10 @@
-var formClearer = document.getElementById("formClearButton");
+let firstWord = document.getElementById("phrase_first_word");
+let secondWord = document.getElementById("phrase_second_word");
 
-formClearer.addEventListener("click", clearForm);
-
-function clearForm() {
+firstWord.addEventListener("click", event => {
   document.getElementById('phrase_first_word').value = "";
+});
+
+secondWord.addEventListener("click", event => {
   document.getElementById('phrase_second_word').value = "";
-}
+});
