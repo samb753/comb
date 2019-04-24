@@ -51,6 +51,10 @@ and (max-device-width: 768px) {
   font-size: 20px;
 }
 
+.minicolors-swatch {
+  display: none !important;
+}
+
 .minicolors-focus {
   outline: none;
   -webkit-appearance: none;
