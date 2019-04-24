@@ -1,6 +1,6 @@
-function update() {
+let colorInput = document.getElementById('phrase_color');
 
-  let colorInput = document.getElementById('phrase_color');
+function update() {
 
   colorInput.onfocus = () => {
     $('body').addClass('no-scroll');

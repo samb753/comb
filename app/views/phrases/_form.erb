@@ -3,8 +3,8 @@
     <%= simple_form_for(@phrase) do |f| %>
     <div class="phrase-data-container trim">
       <div class="col-sm-4 col-md-4 hex-form">
-        <%= f.input :color, as: :minicolors, label:false, placeholder: "🎨", input_html: {data: {
-          minicolors: { position: :top }}}, class: "phrase-form-field" %>
+          <%= f.input :color, as: :minicolors, label:false, placeholder: "🎨", input_html: {data: {
+            minicolors: { position: :top }}}, class: "phrase-form-field" %>
       </div>
       <div class="col-sm-3 col-md-4 words-form">
         <%= f.text_field :first_word, value: Bazaar.super_adj.downcase, placeholder: ".....", class: "phrase-form-field" %>
