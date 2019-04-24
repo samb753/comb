@@ -42,9 +42,12 @@ and (max-device-width: 768px) {
   }
 }
 
-
 .hex-form {
   text-align: left;
+}
+
+.form-group {
+  padding: 0px;
 }
 
 .phrase-hex {
@@ -69,10 +72,15 @@ and (max-device-width: 768px) {
   font-size: 4vh;
   border: none;
   outline: none;
+  padding: 0px;
   background: transparent;
   width: 217px;
   height: 30px;
   box-shadow: none;
+}
+
+#colorMicrotipBox {
+  width: 70px;
 }
 
 #formSubmit {
