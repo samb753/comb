@@ -13,15 +13,15 @@
         <%= f.text_field :second_word, value: Bazaar.super_item.downcase, placeholder: ".....", class: "phrase-form-field" %>
       </div>
       <div class="col-sm-4 col-md-4 new-phrase-buttons">
-        <span aria-label="copy hex" data-microtip-position="top-left" data-microtip-size="fit" role="tooltip">
+        <span aria-label="copy hex (c)" data-microtip-position="top-left" data-microtip-size="fit" role="tooltip">
           <i class="fa fa-clone trim" id="copyHex"></i>
         </span>
         <%= button_tag type: 'submit', class: "trim", id: "formSubmit" do %>
-        <span aria-label="save" data-microtip-position="top-left" data-microtip-size="fit" role="tooltip">
+        <span aria-label="save (enter)" data-microtip-position="top-left" data-microtip-size="fit" role="tooltip">
           <i class="fa fa-save" aria-hidden="true"></i>
         </span>
         <% end %>
-        <span aria-label="random phrase" data-microtip-position="top-left" data-microtip-size="fit" role="tooltip">
+        <span aria-label="random saved phrase" data-microtip-position="top-left" data-microtip-size="fit" role="tooltip">
           <%= link_to ('<i class="fa fa-random"></i>').html_safe, phrase_random_path, class: "trim" %>
         </span>
         <span aria-label="library" data-microtip-position="top-left" data-microtip-size="fit" role="tooltip">

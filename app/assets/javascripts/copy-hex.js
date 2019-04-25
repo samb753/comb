@@ -1,7 +1,8 @@
 function copyToClipboard() {
-  colorInput.select();
-  document.execCommand("copy");
-  // colorInput.minicolors('value','#00FF00');
+  let bgColor = document.getElementById('newPhraseBackground').style.backgroundColor;
+  let converted = rgb2hex(bgColor);
+  copyStringToClipboard(converted);
+  console.log(`${converted} copied!`);
 }
 
 function clearSelection() {
@@ -11,14 +12,32 @@ function clearSelection() {
 
 const copyHex = document.getElementById('copyHex');
 
-copyHex.addEventListener("click", event => {
+copyHex.addEventListener('click', event => {
   copyToClipboard();
   clearSelection();
 });
 
+function rgb2hex(rgb){
+ rgb = rgb.match(/^rgba?[\s+]?\([\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?/i);
+ return (rgb && rgb.length === 4) ? "#" +
+  ("0" + parseInt(rgb[1],10).toString(16)).slice(-2) +
+  ("0" + parseInt(rgb[2],10).toString(16)).slice(-2) +
+  ("0" + parseInt(rgb[3],10).toString(16)).slice(-2) : '';
+}
 
-document.addEventListener('keyup', (e) => {
-  if (e.code === 'KeyC') {
-    copyToClipboard();
-  }
-});
+function copyStringToClipboard (str) {
+   // Create new element
+   var el = document.createElement('textarea');
+   // Set value (string to be copied)
+   el.value = str;
+   // Set non-editable to avoid focus and move outside of view
+   el.setAttribute('readonly', '');
+   el.style = {position: 'absolute', left: '-9999px'};
+   document.body.appendChild(el);
+   // Select text inside element
+   el.select();
+   // Copy text to clipboard
+   document.execCommand('copy');
+   // Remove temporary element
+   document.body.removeChild(el);
+}
