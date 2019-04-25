@@ -1,6 +1,7 @@
 function copyToClipboard() {
-  document.getElementById('phrase_color').select();
+  colorInput.select();
   document.execCommand("copy");
+  // colorInput.minicolors('value','#00FF00');
 }
 
 function clearSelection() {
@@ -13,4 +14,11 @@ const copyHex = document.getElementById('copyHex');
 copyHex.addEventListener("click", event => {
   copyToClipboard();
   clearSelection();
+});
+
+
+document.addEventListener('keyup', (e) => {
+  if (e.code === 'KeyC') {
+    copyToClipboard();
+  }
 });
