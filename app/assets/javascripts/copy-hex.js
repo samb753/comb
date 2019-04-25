@@ -15,6 +15,11 @@ const copyHex = document.getElementById('copyHex');
 copyHex.addEventListener('click', event => {
   copyToClipboard();
   clearSelection();
+  let copyHexTooltip = document.getElementById('copyHexTooltip');
+  copyHexTooltip.setAttribute('aria-label', 'copied!');
+  setTimeout(function() {
+            copyHexTooltip.setAttribute('aria-label', 'copy hex');
+        }, 500);
 });
 
 function rgb2hex(rgb){
