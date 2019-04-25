@@ -1,5 +1,6 @@
+let bgColor = document.getElementsByClassName('phrase-container')[0].style.backgroundColor;
+
 function copyToClipboard() {
-  let bgColor = document.getElementById('newPhraseBackground').style.backgroundColor;
   let converted = rgb2hex(bgColor);
   copyStringToClipboard(converted);
   console.log(`${converted} copied!`);
