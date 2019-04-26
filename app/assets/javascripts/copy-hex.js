@@ -55,7 +55,7 @@ function clearSelection() {
    else if (document.selection) {document.selection.empty();}
  }
 
-let copyHex = document.getElementById('copyHex');
+const copyHex = document.getElementById('copyHex');
 
 copyHex.addEventListener('click', event => {
   copyHexToClipboard();
@@ -66,5 +66,7 @@ copyHex.addEventListener('click', event => {
     copyHexTooltip.setAttribute('aria-label', 'copy hex');
   }, 500);
 });
+
+
 
 
