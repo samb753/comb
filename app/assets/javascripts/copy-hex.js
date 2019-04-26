@@ -1,27 +1,9 @@
-
-function copyToClipboard() {
+function copyHexToClipboard() {
   let bgColor = document.getElementsByClassName('phrase-container')[0].style.backgroundColor;
   let converted = rgbToHex(bgColor);
   copyStringToClipboard(converted);
   console.log(`${converted} copied!`);
 }
-
-function clearSelection() {
- if (window.getSelection) {window.getSelection().removeAllRanges();}
- else if (document.selection) {document.selection.empty();}
-}
-
-const copyHex = document.getElementById('copyHex');
-
-copyHex.addEventListener('click', event => {
-  copyToClipboard();
-  clearSelection();
-  let copyHexTooltip = document.getElementById('copyHexTooltip');
-  copyHexTooltip.setAttribute('aria-label', 'copied!');
-  setTimeout(function() {
-            copyHexTooltip.setAttribute('aria-label', 'copy hex');
-        }, 500);
-});
 
 function rgbToHex(color) {
     color = ""+ color;
@@ -45,7 +27,7 @@ function rgbToHex(color) {
     );
 }
 
-function copyStringToClipboard (str) {
+function copyStringToClipboard(str) {
    // Create new element
    var el = document.createElement('textarea');
    // Set value (string to be copied)
@@ -60,4 +42,23 @@ function copyStringToClipboard (str) {
    document.execCommand('copy');
    // Remove temporary element
    document.body.removeChild(el);
-}
+ }
+
+function clearSelection() {
+   if (window.getSelection) {window.getSelection().removeAllRanges();}
+   else if (document.selection) {document.selection.empty();}
+ }
+
+const copyHex = document.getElementById('copyHex');
+
+copyHex.addEventListener('click', event => {
+  copyHexToClipboard();
+  clearSelection();
+  let copyHexTooltip = document.getElementById('copyHexTooltip');
+  copyHexTooltip.setAttribute('aria-label', 'copied!');
+  setTimeout(function() {
+    copyHexTooltip.setAttribute('aria-label', 'copy hex');
+  }, 500);
+});
+
+
