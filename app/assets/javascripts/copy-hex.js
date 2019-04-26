@@ -1,7 +1,7 @@
 
 function copyToClipboard() {
   let bgColor = document.getElementsByClassName('phrase-container')[0].style.backgroundColor;
-  let converted = rgb2hex(bgColor);
+  let converted = rgbToHex(bgColor);
   copyStringToClipboard(converted);
   console.log(`${converted} copied!`);
 }
@@ -23,12 +23,26 @@ copyHex.addEventListener('click', event => {
         }, 500);
 });
 
-function rgb2hex(rgb){
- rgb = rgb.match(/^rgba?[\s+]?\([\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?/i);
- return (rgb && rgb.length === 4) ? "#" +
-  ("0" + parseInt(rgb[1],10).toString(16)).slice(-2) +
-  ("0" + parseInt(rgb[2],10).toString(16)).slice(-2) +
-  ("0" + parseInt(rgb[3],10).toString(16)).slice(-2) : '';
+function rgbToHex(color) {
+    color = ""+ color;
+    if (!color || color.indexOf("rgb") < 0) {
+        return;
+    }
+
+    if (color.charAt(0) == "#") {
+        return color;
+    }
+
+    var nums = /(.*?)rgb\((\d+),\s*(\d+),\s*(\d+)\)/i.exec(color),
+        r = parseInt(nums[2], 10).toString(16),
+        g = parseInt(nums[3], 10).toString(16),
+        b = parseInt(nums[4], 10).toString(16);
+
+    return "#"+ (
+        (r.length == 1 ? "0"+ r : r) +
+        (g.length == 1 ? "0"+ g : g) +
+        (b.length == 1 ? "0"+ b : b)
+    );
 }
 
 function copyStringToClipboard (str) {
