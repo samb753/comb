@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   get '*path', to: 'phrase#index' unless Rails.env.development?
 
   resources :users
+  get 'users/:user_id', to: 'users#show'
 end
