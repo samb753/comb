@@ -1,4 +1,4 @@
-let copyHex = document.getElementById('copyHex');
+// let copyHex = document.getElementById('copyHex');
 
 function copyHexToClipboard() {
   let bgColor = document.getElementsByClassName('phrase-container')[0].style.backgroundColor;
@@ -11,6 +11,8 @@ function copyHexToClipboard() {
     copyStringToClipboard(showHex.innerText);
     console.log(`${showHex.innerText} copied!`);
   }
+  clearSelection();
+  updateTooltip();
 }
 
 function rgbToHex(color) {
@@ -65,11 +67,11 @@ function updateTooltip() {
   }, 500);
 }
 
-copyHex.addEventListener('click', event => {
-  copyHexToClipboard();
-  clearSelection();
-  updateTooltip();
-});
+// copyHex.addEventListener('click', event => {
+//   copyHexToClipboard();
+//   clearSelection();
+//   updateTooltip();
+// });
 
 
 

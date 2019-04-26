@@ -14,7 +14,7 @@
       </div>
       <div class="col-sm-4 col-md-4 new-phrase-buttons">
         <span id="copyHexTooltip" aria-label="copy hex" data-microtip-position="top-left" data-microtip-size="fit" role="tooltip">
-          <i class="fa fa-clone" id="copyHex"></i>
+          <i class="fa fa-clone" id="copyHex" onClick="copyHexToClipboard()"></i>
         </span>
         <%= button_tag type: 'submit', class: "trim", id: "formSubmit" do %>
         <span aria-label="save" data-microtip-position="top-left" data-microtip-size="fit" role="tooltip">

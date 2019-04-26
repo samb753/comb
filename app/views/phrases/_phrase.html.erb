@@ -10,7 +10,7 @@
     </div>
     <div class="col-sm-4 phrase-navigation">
       <span id="copyHexTooltip" aria-label="copy hex" data-microtip-position="top-left" data-microtip-size="fit" role="tooltip">
-        <i class="fa fa-clone trim" id="copyHex"></i>
+        <i class="fa fa-clone trim" id="copyHex" onClick="copyHexToClipboard()"></i>
       </span>
       <span aria-label="new" data-microtip-position="top-left" role="tooltip">
       <%= link_to ('<i class="fa fa-plus"></i>').html_safe, new_phrase_path, class: "trim" %>
