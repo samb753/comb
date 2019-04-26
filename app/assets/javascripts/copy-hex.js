@@ -1,3 +1,5 @@
+let copyHex = document.getElementById('copyHex');
+
 function copyHexToClipboard() {
   let bgColor = document.getElementsByClassName('phrase-container')[0].style.backgroundColor;
   let converted = rgbToHex(bgColor);
@@ -55,17 +57,20 @@ function clearSelection() {
    else if (document.selection) {document.selection.empty();}
  }
 
-const copyHex = document.getElementById('copyHex');
-
-copyHex.addEventListener('click', event => {
-  copyHexToClipboard();
-  clearSelection();
+function updateTooltip() {
   let copyHexTooltip = document.getElementById('copyHexTooltip');
   copyHexTooltip.setAttribute('aria-label', 'copied!');
   setTimeout(function() {
     copyHexTooltip.setAttribute('aria-label', 'copy hex');
   }, 500);
+}
+
+copyHex.addEventListener('click', event => {
+  copyHexToClipboard();
+  clearSelection();
+  updateTooltip();
 });
+
 
 
 
